@@ -1,0 +1,8 @@
+Time elapsed: 0.076s
+Test 1: Right!
+---------------
+Time elapsed: 0.071s
+Test 2: Right!
+---------------
+Time elapsed: 0.071s
+Test 3: Wrong!
