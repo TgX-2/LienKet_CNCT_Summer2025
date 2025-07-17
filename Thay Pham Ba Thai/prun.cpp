@@ -40,9 +40,24 @@ template<typename T1, typename T2> bool maxi(T1 &a, T2 b)
     {if (a < b) a = b; else return 0; return 1;}
 /*-----------------------------*/
 
+const int mod  = 1e9 + 7;
+const int maxn = 1007;
+int n, k, dp[maxn][maxn];
 
-void process() {
-    cout << "chg";
+void add(int &x, const int &y){
+    x += y;
+    if(x >= mod) x -= mod;
+}
+
+void process(){
+	cin >> n >> k;
+    dp[1][1] = 1;
+    FOR(i, 2, n) FOR(j, 1, i) {
+        add(dp[i][j], dp[i - 1][j] * j % mod);
+        add(dp[i][j], dp[i - 1][j - 1] * (i - j + 1) % mod);
+    }
+    
+    cout << dp[n][k];
 }
 
 

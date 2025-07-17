@@ -42,7 +42,8 @@ template<typename T1, typename T2> bool maxi(T1 &a, T2 b)
 
 
 void process() {
-    cout << -1;
+    int x = -3;
+    cout << (x / 2) _ (x >> 1) __ ;
 }
 
 
